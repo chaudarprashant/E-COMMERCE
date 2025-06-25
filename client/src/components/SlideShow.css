@@ -1,0 +1,39 @@
+.carousel-img {
+  border-radius: 20px;
+  object-fit: cover;
+  height: 500px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .carousel-img {
+
+    height: 250px;
+    border-radius: 15px;
+  }
+
+  .carousel-caption h5 {
+    font-size: 16px;
+  }
+
+  .carousel-caption p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-img {
+    height: 200px;
+    border-radius: 12px;
+  }
+
+  .carousel-caption {
+    bottom: 10px;
+  }
+
+  .carousel-caption h5,
+  .carousel-caption p {
+    font-size: 12px;
+  }
+}

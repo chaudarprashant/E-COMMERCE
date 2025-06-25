@@ -1,0 +1,12 @@
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full screen center */
+  background-color: white; /* Optional */
+}
+
+.spinner-video {
+  width: 120px; /* Adjust as needed */
+  height: auto;
+}

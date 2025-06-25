@@ -1,0 +1,45 @@
+/* Main container adjustments */
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .col-md-2 {
+    width: 100% !important;
+    margin-bottom: 1rem;
+  }
+
+  .col-md-9 {
+    width: 100% !important;
+  }
+
+  .filter-section {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+  }
+
+  .filter-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+    color: #2c3e50;
+  }
+
+  .filter-content {
+    margin-top: 10px;
+  }
+
+  .filter-content.hidden {
+    display: none;
+  }
+
+  .btn-danger {
+    margin-top: 1rem;
+  }
+}

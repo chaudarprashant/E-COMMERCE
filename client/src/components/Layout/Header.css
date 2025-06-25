@@ -1,0 +1,118 @@
+/* GENERAL NAVBAR STYLES */
+.navbar {
+  background-color: #ffffff !important;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #e5e5e5;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #333;
+  text-decoration: none;
+}
+
+.navbar-brand img {
+  margin-left: 10px;
+  height: 40px;
+}
+
+/* NAVBAR LINKS */
+.navbar-nav .nav-link {
+  font-weight: 500;
+  color: #333;
+  padding: 10px;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #007bff;
+}
+
+.navbar-nav .dropdown-menu {
+  border-radius: 0;
+  border: 1px solid #ddd;
+}
+
+/* SEARCH BAR CONTAINER */
+.search-container {
+  margin-right: 1rem;
+}
+
+/* BADGE ICON (Cart) */
+.ant-badge {
+  vertical-align: middle;
+}
+
+/* ======================= */
+/* RESPONSIVE - MOBILE VIEW */
+/* ======================= */
+@media (max-width: 768px) {
+  .navbar-collapse {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    z-index: 999;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .navbar-nav .nav-link,
+  .navbar-nav .dropdown-toggle {
+    width: 100%;
+    text-align: left;
+    padding: 10px 0;
+    border-bottom: 1px solid #eaeaea;
+  }
+
+  .search-container {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .navbar-toggler {
+    border: none;
+    outline: none;
+  }
+
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
+
+  .dropdown-menu {
+    position: static !important;
+    float: none;
+    width: 100%;
+    margin-top: 0;
+    background-color: #f9f9f9;
+    box-shadow: none;
+  }
+
+  .dropdown-item {
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+
+  .ant-badge {
+    margin-left: 5px;
+  }
+}

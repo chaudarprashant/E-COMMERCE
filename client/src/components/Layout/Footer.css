@@ -1,0 +1,52 @@
+.footer {
+  background-color: #1c1c1c;
+  color: white;
+  padding-top: 3rem;
+  padding-bottom: 1.5rem;
+}
+
+.footer h5 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.footer ul {
+  padding-left: 0;
+}
+
+.footer li {
+  margin-bottom: 0.5rem;
+}
+
+.footer a {
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #ffa500; /* Highlight on hover */
+}
+
+/* Responsive design for mobile screens */
+@media (max-width: 768px) {
+  .footer .row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer .col-md-4 {
+    margin-bottom: 2rem;
+  }
+
+  .footer h5 {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .footer li {
+    margin-bottom: 0.4rem;
+  }
+
+  .footer a {
+    font-size: 0.95rem;
+  }
+}
