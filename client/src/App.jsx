@@ -26,12 +26,14 @@ import CategoryProduct from './pages/CategoryProduct'
 import CartPage from './pages/CartPage'
 import AdminOrders from './pages/Admin/AdminOrders'
 import ScrollToTopButton from './components/ScrollToTopButton'
+import MainPage from './pages/MainPage'
 
 const App = () => {
   return (
    <>
    <Routes>
-      <Route path='/' element={<HomePage/>}/>
+      <Route path='/home' element={<HomePage/>}/>
+      <Route path='/' element={<MainPage/>}/>
       <Route path='/product/:slug' element={<ProductDetails/>}/>
       <Route path="/categories" element={<Categories />} />
       <Route path="/cart" element={<CartPage/>} />

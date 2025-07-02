@@ -31,6 +31,7 @@ const CartPage = () => {
       console.log(error);
     }
   };
+  
   //detele item
   const removeCartItem = (pid) => {
     try {

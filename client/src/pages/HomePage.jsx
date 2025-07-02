@@ -117,9 +117,9 @@ const HomePage = () => {
 
   return (
     <Layout>
-      <div className="mt-3 ms-5">
+      {/* <div className="mt-3 ms-5">
         <SlideShow />
-      </div>
+      </div> */}
 
       <div className="row mt-3 ms-2">
         <div className="col-md-2">
