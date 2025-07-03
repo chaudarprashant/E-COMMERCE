@@ -1,3 +1,47 @@
+/* New Search Bar next to Hamburger in Mobile View */
+.mobile-search-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
+  padding: 5px 0;
+}
+
+.mobile-search-container input {
+  width: 180px;
+  font-size: 11px;
+}
+/* Hide search bar in collapsed menu on mobile */
+@media (max-width: 767px) {
+  .search-container {
+    display: none !important;
+  }
+}
+
+
+@media (min-width: 768px) {
+  .mobile-search-container {
+    display: none !important;
+  }
+}
+
+
+/**/
+/* Default width for desktop */
+.search-input {
+  width: 500px;
+}
+
+/* Responsive width for mobile */
+@media (max-width: 768px) {
+  .search-input {
+    width: 140px !important;
+    font-size: 13px;
+    padding: 5px 8px;
+  }
+}
+
+
 /* GENERAL NAVBAR STYLES */
 .navbar {
   background-color: #ffffff !important;

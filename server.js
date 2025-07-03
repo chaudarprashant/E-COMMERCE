@@ -6,6 +6,8 @@ import connectDB from "./config/db.js";
 import authRoute from "./routes/authRoute.js"
 import categoryRoutes from './routes/categoryRoutes.js'
 import productRoutes from './routes/productRoutes.js'
+import cors from 'cors';
+
 
 //configure env
 dotenv.config();
@@ -17,8 +19,14 @@ connectDB();
 const app = express();
 
 //middleware
+app.use(cors());
 app.use(express.json());
 app.use(morgan('dev'));
+
+app.use(cors({
+  origin: 'http://localhost:5173',
+  credentials: true
+}));
 
 //routes
  app.use("/api/v1/auth",authRoute);

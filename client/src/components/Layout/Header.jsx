@@ -32,8 +32,11 @@ const Header = () => {
   return (
     <>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
-        <div className="container-fluid">
-          <button
+        <div className="container-fluid py-1 px-2">
+
+         <div className="d-flex justify-content-between align-items-center w-100">
+
+ <button
             className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
@@ -44,11 +47,18 @@ const Header = () => {
           >
             <span className="navbar-toggler-icon" />
           </button>
+          <div className="mobile-search-container d-md-none">
+           <SearchInput />
+         </div>
+ 
+ 
+         </div>
+
           <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
             <Link to="/" className="navbar-brand">
             {/* &nbsp;&nbsp;&nbsp;MegaMart */}
 
-           <img src={logo}  width="200"/>
+           {/* <img src={logo}  width="200"/> */}
 
             </Link>
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0 mx-3">
@@ -57,8 +67,7 @@ const Header = () => {
               <div className="search-container">
              <SearchInput />
              </div>
-
-              
+   
               <li className="nav-item">
                 <NavLink to="/" className="nav-link mx-3">
                   Home
