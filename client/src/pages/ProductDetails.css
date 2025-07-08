@@ -1,0 +1,45 @@
+/* ProductDetailsStyles.css */
+
+.product-details-container {
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.product-details-info {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.product-image {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.product-details-info h1 {
+  font-size: 24px;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0.5rem;
+}
+
+.product-details-info h6 {
+  margin-bottom: 0.75rem;
+  color: #444;
+}
+
+.similar-products h6 {
+  font-weight: bold;
+  margin-top: 2rem;
+}
+
+.card img {
+  height: 180px;
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}

@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import Layout from "../components/Layout/Layout";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
+import { useCart } from "../context/cart";
+import toast from "react-hot-toast";
 
 const CategoryProduct = () => {
   const params = useParams();
@@ -9,6 +11,7 @@ const CategoryProduct = () => {
   const [products, setProducts] = useState([]);
   const [category, setCategory] = useState([]);
   const [loading, setLoading] = useState(true); // NEW: loading state
+  const [cart, setCart] = useCart(); // ✅ Use cart context
 
   useEffect(() => {
     if (params?.slug) getPrductsByCat();
@@ -58,15 +61,24 @@ const CategoryProduct = () => {
                         {p.description.substring(0, 30)}...
                       </p>
                       <p className="card-text"> $ {p.price}</p>
-                      <button
+                    
+                    <div className="d-flex justify-content-between mt-2">
+                        <button
                         className="btn btn-primary ms-1"
                         onClick={() => navigate(`/product/${p.slug}`)}
                       >
                         More Details
                       </button>
-                      <button className="btn btn-secondary ms-1">
+                      <button className="btn btn-secondary ms-1"
+                       onClick={() => {
+                          setCart([...cart, p]); // ✅ Add to cart
+                          localStorage.setItem("cart", JSON.stringify([...cart, p])); // ✅ Save in localStorage
+                          toast.success("Item Added to cart"); // ✅ Notify user
+                        }}
+                        >
                         ADD TO CART
                       </button>
+                    </div>
                     </div>
                   </div>
                 ))}
